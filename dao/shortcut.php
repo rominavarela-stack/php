@@ -6,7 +6,7 @@
     /**
     * @method insertShortcut
     * @param url string
-    * @return Shortcut Object { id , url , timestamp }
+    * @return Shortcut Object { id , url }
     **/
     public static function insertShortcut($url) {
       $connection = new PDO( Config::connString, Config::connUser, Config::connPass);
@@ -17,6 +17,24 @@
       $result = $query->fetch(PDO::FETCH_OBJ);
 
       return $result;
+    }
+
+    /**
+    * @method getShortcuts
+    * @return Shortcut Object Array [] { id , url , timestamp }
+    **/
+    public static function getShortcuts() {
+      $connection = new PDO( Config::connString, Config::connUser, Config::connPass);
+
+      $query = $connection->prepare('SELECT * FROM urls.SHORTCUT');
+      $query->execute();
+      $results = $query->fetchAll(PDO::FETCH_OBJ);
+
+      /*foreach($results as $res) {
+        echo $res->id;
+      }*/
+
+      return $results;
     }
 
   }

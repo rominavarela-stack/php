@@ -2,6 +2,7 @@
 <?php require_once '../dao/shortcut.php' ?>
 
 <?php
+
   if($_POST["url"])
     try
     {
