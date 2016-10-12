@@ -1,5 +1,4 @@
-<?php include '../init.php' ?>
-<?php include '../controllers/index.php' ?>
+<?php require_once '../controllers/index.php' ?>
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -49,7 +48,7 @@
                 value="<?= $shortcut ?>" readonly/>
             </div>
           <?php endif ?>
-          
+
         </div>
 
         <!--js-->
