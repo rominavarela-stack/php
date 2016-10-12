@@ -1,0 +1,13 @@
+{
+  "name": "urls",
+  "description": "URL Shortcuts web services",
+  "authors": [
+    "Romina Varela"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rominavarela-stack",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.6"
+  }
+}
